@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+  src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.col-md-12, .col-sm-12 {
+  padding: 20px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+section#main {
+  margin-left: 250px;
+}
+
+section.container {
+  margin-top: 100px;
+}
+
+nav.navbar {
+  z-index: 1030;
+  border-bottom: 1px gray solid;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #d39e00;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #d39e00;
+}
+
+.nav-link:hover, .nav-link:active {
+  color: #f39c12;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); */
+}
+
+.sidebar-sticky {
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 1.9em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img.mx-auto {
+  margin-bottom: 5px;
+}
+
+p.bordered {
+  border-bottom: 1px solid gray;
+}
+
+input.form-control {
+  border-radius: 75px;
+}
+
+.image-dropdown {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+image.width {
+  width: 100% !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  /* border-color: #dee2e6 #dee2e6 #fff; */
+}
+
+.nav-tabs {
+  border-bottom: none
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-control:focus, .form-control:active, .form-control:hover   {
+  color: #495057;
+  background-color: #fff;
+  border-color: #d39e00;
+  box-shadow: 0 0 0 0 !important;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767px) { 
+  section.container {
+    max-width: 640px !important;
+  }
+
+  section#main {
+    margin: 100px auto !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  section.container {
+    max-width: 1080px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  section#main {
+    margin-left: 20% !important;
+  }
+}
+
+.btn-warning {
+  color: #fff;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  section.container {
+    max-width: 1080px !important;
+  }
+
+  section#main {
+    margin-left: 20% !important;
   }
 }
